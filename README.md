@@ -5,7 +5,7 @@
 * bashrc
 
 ```bash
-wget url/bash_profile.sh ~/.bash_profile
+wget https://raw.githubusercontent.com/ZihengChen/SetupNewMacOS/master/bash_profile.sh ~/.bash_profile
 ```
 
 * xcode 
