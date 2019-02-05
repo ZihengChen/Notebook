@@ -1,5 +1,6 @@
 
 # Setup a New MacOS
+This setup is tested on MacOS 10.14.0
 
 * bashrc
 
@@ -23,7 +24,7 @@ brew install cmake
 ```
 
 * root
-
+download root v6.14.00 or later from [here](https://root.cern.ch/downloading-root)
 ```bash
 sudo mkdir /usr/local/root
 cd /usr/local/root
