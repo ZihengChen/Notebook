@@ -13,7 +13,7 @@ download the latest xcode from AppSore and install command-line tool `xcode-sele
 
 * anaconda
 
-download anaconda installation
+download anaconda distribution, choose [latest](https://www.anaconda.com/distribution/) or [previous](https://repo.continuum.io/archive/) version.
 
 * homebrew and cmake
 
