@@ -63,7 +63,6 @@ export PYTHONPATH=$PYTHONPATH:/Users/zihengchen/Documents/ImageAlgorithm/ImageAl
 
 # add root
 export ROOTSYS=/usr/local/root
-#export LD_LIBRARY_PATH=$ROOTSYS/lib:$PYTHONDIR/lib:$LD_LIBRARY_PATH
 export PYTHONPATH=$PYTHONPATH:$ROOTSYS/lib
 source $ROOTSYS/bin/thisroot.sh
 
