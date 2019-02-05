@@ -1,6 +1,5 @@
-# SetupNewMacOS
 
-## Basic Installation
+# Setup a New MacOS
 
 * bashrc
 
