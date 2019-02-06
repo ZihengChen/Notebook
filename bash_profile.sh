@@ -2,7 +2,7 @@
 # 1. ssh 
 ################
 alias fnal='kinit zchen@FNAL.GOV'
-alias sshlpc='ssh -X -Y -R 52691:127.0.0.1:52691 zchen@cmslpc-sl6.fnal.gov'
+alias sshlpc='ssh -X -Y -R 52698:127.0.0.1:52698 zchen@cmslpc-sl6.fnal.gov'
 alias sshlxplus='ssh -X -Y -R 52698:127.0.0.1:52698 zichen@lxplus043.cern.ch'
 alias sshws='ssh -Y -R 52698:127.0.0.1:52698 zchen@bahamut.phys.northwestern.edu'
 alias juws='ssh -N -f -L localhost:8889:localhost:8889 zchen@bahamut.phys.northwestern.edu'
