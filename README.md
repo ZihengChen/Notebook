@@ -5,7 +5,7 @@ This setup is tested on MacOS 10.14.0
 * bashrc
 
 ```bash
-wget https://raw.githubusercontent.com/ZihengChen/SetupNewMacOS/master/bash_profile.sh ~/.bash_profile
+curl https://raw.githubusercontent.com/ZihengChen/SetupNewMacOS/master/bash_profile.sh ~/.bash_profile
 ```
 
 * xcode 
