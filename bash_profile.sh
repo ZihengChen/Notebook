@@ -41,14 +41,21 @@ fromlpc(){
 }
 
 # CMS tdr
+updatetdr(){
+    svn update utils
+    svn update notes/AN-18-030
+    svn update papers/AN-10-030
+}
+
+
 an(){
-eval `/Users/zihengchen/Documents/Analysis/docs/notes/tdr runtime -sh`
-tdr  --draft --style=an b AN-18-030
+    eval `/Users/zihengchen/Documents/Analysis/docs/notes/tdr runtime -sh`
+    tdr  --draft --style=an b AN-18-030
 }
 
 pp(){
-eval `/Users/zihengchen/Documents/Analysis/docs/papers/tdr runtime -sh`
-tdr  --draft --style=paper b SMP-18-011
+    eval `/Users/zihengchen/Documents/Analysis/docs/papers/tdr runtime -sh`
+    tdr  --draft --style=paper b SMP-18-011
 }
 
 
