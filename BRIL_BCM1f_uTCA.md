@@ -14,7 +14,7 @@ Details of usage found in Alex's [wiki](https://gitlab.cern.ch/bril/ubcm/wikis/t
 
 SSH to PC
 ```
-ssh zichen@brillab186
+ssh -X -Y zichen@brillab186
 ```
 
 For the first time, clone the BCM1f uTCA repository
