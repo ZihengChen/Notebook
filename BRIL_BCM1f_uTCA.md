@@ -44,6 +44,9 @@ Run simple DAQ
 bin/raw_daq -t bcm1f.brillab186.amc3 OUTFILEPREF 10
 ```
 
-
+Plot 
+```
+python scripts/plot_orbit.py filename.csv 1
+```
 
 
