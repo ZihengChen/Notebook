@@ -3,8 +3,7 @@
 
 ## 0. Administration Preparation
 
-Get dosimeter [here](https://dosimetry.web.cern.ch/en/dosimeter-obtain). To get a normal dosimeter, 
-a home institute certificate is required and it can be signed by physics department.
+Request a dosimeter. Instructions are [here](https://dosimetry.web.cern.ch/en/dosimeter-obtain). 
 
 Request access to the CMS BRIL lab `0186-1-f03` in the [ADaMS](http://cern.ch/adams).
 
