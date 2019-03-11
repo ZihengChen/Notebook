@@ -40,9 +40,11 @@ brilcalc lumi -b "STABLE BEAMS" --normtag /afs/cern.ch/user/l/lumipro/public/Nor
 brilcalc lumi -b "STABLE BEAMS" --normtag /afs/cern.ch/user/l/lumipro/public/Normtags/normtag_PHYSICS.json -u /fb -i /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions16/13TeV/Era/ReReco/Cert_280919-284044_13TeV_PromptReco_Collisions16_JSON_eraH.txt
 ```
 
+By running these script, the result from `brilcalc` is listed in the following table.
 
+<center>
 |       | LHC delivered [/fb] | CMS recorded [/fb] |
-|-------|---------------------|--------------------|
+|-------|--------------------:|-------------------:|
 | 2016B |               5.991 |               5.75 |
 | 2016C |               2.685 |              2.573 |
 | 2016D |               4.411 |              4.242 |
@@ -51,3 +53,5 @@ brilcalc lumi -b "STABLE BEAMS" --normtag /afs/cern.ch/user/l/lumipro/public/Nor
 | 2016G |               7.865 |              7.576 |
 | 2016H |               8.985 |              8.651 |
 | total |              37.462 |             35.922 |
+  
+</center>
