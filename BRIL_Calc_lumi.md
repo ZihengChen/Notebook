@@ -2,7 +2,7 @@
 
 ## 1. Login and Setup
 To calculate luminosity for a given data section. First go to `lxplus`
-```
+```bash
 ssh zichen@lxplus.cern.ch
 ```
 
