@@ -42,7 +42,7 @@ brilcalc lumi -b "STABLE BEAMS" --normtag /afs/cern.ch/user/l/lumipro/public/Nor
 
 By running these script, the result from `brilcalc` is listed in the following table.
 
-<center>
+
 |       | LHC delivered [/fb] | CMS recorded [/fb] |
 |-------|--------------------:|-------------------:|
 | 2016B |               5.991 |               5.75 |
@@ -54,4 +54,3 @@ By running these script, the result from `brilcalc` is listed in the following t
 | 2016H |               8.985 |              8.651 |
 | total |              37.462 |             35.922 |
   
-</center>
