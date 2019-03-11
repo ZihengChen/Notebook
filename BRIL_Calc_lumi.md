@@ -1,4 +1,6 @@
+# Calculate Luminosity
 
+## 1. Login and Setup
 To calculate luminosity for a given data section. First go to `lxplus`
 ```
 ssh zichen@lxplus.cern.ch
@@ -12,6 +14,7 @@ export PATH=$HOME/.local/bin:/cvmfs/cms-bril.cern.ch/brilconda/bin:$PATH
 pip install --install-option="--prefix=$HOME/.local" brilws
 ```
 
+## 2. Run brilcalc
 Then use `brilcalc` to calculate luminosity
 ```
 brilcalc lumi -b "STABLE BEAMS" --normtag /afs/cern.ch/user/l/lumipro/public/Normtags/normtag_PHYSICS.json -i inputLumis.json -u /fb
