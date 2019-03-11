@@ -52,5 +52,5 @@ By running these script, the result from `brilcalc` is listed in the following t
 | 2016F |               3.303 |              3.105 |
 | 2016G |               7.865 |              7.576 |
 | 2016H |               8.985 |              8.651 |
-| total |              37.462 |             35.922 |
+| **total** |      **37.462** |         **35.922** |
   
