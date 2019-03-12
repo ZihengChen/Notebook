@@ -62,9 +62,21 @@ For 2017 A-F, era-split json are: `/afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certifi
 
 ```shell
 brilcalc lumi -b "STABLE BEAMS" --normtag /afs/cern.ch/user/l/lumipro/public/Normtags/normtag_PHYSICS.json -u /fb -i /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions17/13TeV/Era/Prompt/Cert_294927-297019_13TeV_PromptReco_Collisions17_JSON_eraA.txt
-brilcalc lumi -b "STABLE BEAMS" --normtag /afs/cern.ch/user/l/lumipro/public/Normtags/normtag_PHYSICS.json -u /fb -i /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions17/13TeV/Era/Prompt/Cert_294927-297019_13TeV_PromptReco_Collisions17_JSON_eraB.txt
-brilcalc lumi -b "STABLE BEAMS" --normtag /afs/cern.ch/user/l/lumipro/public/Normtags/normtag_PHYSICS.json -u /fb -i /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions17/13TeV/Era/Prompt/Cert_294927-297019_13TeV_PromptReco_Collisions17_JSON_eraC.txt
-brilcalc lumi -b "STABLE BEAMS" --normtag /afs/cern.ch/user/l/lumipro/public/Normtags/normtag_PHYSICS.json -u /fb -i /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions17/13TeV/Era/Prompt/Cert_294927-297019_13TeV_PromptReco_Collisions17_JSON_eraD.txt
-brilcalc lumi -b "STABLE BEAMS" --normtag /afs/cern.ch/user/l/lumipro/public/Normtags/normtag_PHYSICS.json -u /fb -i /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions17/13TeV/Era/Prompt/Cert_294927-297019_13TeV_PromptReco_Collisions17_JSON_eraE.txt
-brilcalc lumi -b "STABLE BEAMS" --normtag /afs/cern.ch/user/l/lumipro/public/Normtags/normtag_PHYSICS.json -u /fb -i /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions17/13TeV/Era/Prompt/Cert_294927-297019_13TeV_PromptReco_Collisions17_JSON_eraF.txt
+brilcalc lumi -b "STABLE BEAMS" --normtag /afs/cern.ch/user/l/lumipro/public/Normtags/normtag_PHYSICS.json -u /fb -i /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions17/13TeV/Era/Prompt/Cert_297020-299329_13TeV_PromptReco_Collisions17_JSON_eraB.txt
+brilcalc lumi -b "STABLE BEAMS" --normtag /afs/cern.ch/user/l/lumipro/public/Normtags/normtag_PHYSICS.json -u /fb -i /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions17/13TeV/Era/Prompt/Cert_299337-302029_13TeV_PromptReco_Collisions17_JSON_eraC.txt
+brilcalc lumi -b "STABLE BEAMS" --normtag /afs/cern.ch/user/l/lumipro/public/Normtags/normtag_PHYSICS.json -u /fb -i /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions17/13TeV/Era/Prompt/Cert_302030-303434_13TeV_PromptReco_Collisions17_JSON_eraD.txt
+brilcalc lumi -b "STABLE BEAMS" --normtag /afs/cern.ch/user/l/lumipro/public/Normtags/normtag_PHYSICS.json -u /fb -i /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions17/13TeV/Era/Prompt/Cert_303435-304826_13TeV_PromptReco_Collisions17_JSON_eraE.txt
+brilcalc lumi -b "STABLE BEAMS" --normtag /afs/cern.ch/user/l/lumipro/public/Normtags/normtag_PHYSICS.json -u /fb -i /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions17/13TeV/Era/Prompt/Cert_304911-306462_13TeV_PromptReco_Collisions17_JSON_eraF.txt
 ```
+
+By running these script, the result from `brilcalc` is listed in the following table.
+
+
+|       | LHC delivered [/fb] | CMS recorded [/fb] |
+|-------|--------------------:|-------------------:|
+| 2017B |               5.124 |              4.823 |
+| 2017C |              10.589 |              9.664 |
+| 2017D |               4.427 |              4.252 |
+| 2017E |               9.760 |              9.278 |
+| 2017F |              14.303 |             13.540 |
+| **total** |      **37.462** |         **35.922** |
