@@ -79,4 +79,4 @@ By running these script, the result from `brilcalc` is listed in the following t
 | 2017D |               4.427 |              4.252 |
 | 2017E |               9.760 |              9.278 |
 | 2017F |              14.303 |             13.540 |
-| **total** |      **37.462** |         **35.922** |
+| **total** |      **44.203** |         **41.557** |
