@@ -6,11 +6,13 @@ To calculate luminosity for a given data section. First go to `lxplus`
 ssh zichen@lxplus.cern.ch
 ```
 
-Setup BRIL tools by adding `brilconda` to path and installing `brilws`.
-Skip installing brilws if alread installed.
-
+Then add `brilconda` to path.
 ```shell
 export PATH=$HOME/.local/bin:/cvmfs/cms-bril.cern.ch/brilconda/bin:$PATH
+```
+
+Note that for the first time user, pip install `brilws` if brilws is missing.
+```shell
 pip install --install-option="--prefix=$HOME/.local" brilws
 ```
 
@@ -54,3 +56,15 @@ By running these script, the result from `brilcalc` is listed in the following t
 | 2016H |               8.985 |              8.651 |
 | **total** |      **37.462** |         **35.922** |
   
+
+### 2.1 Example: 2017 promptReco
+For 2017 A-F, era-split json are: `/afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions17/13TeV/Era/Prompt/`
+
+```shell
+brilcalc lumi -b "STABLE BEAMS" --normtag /afs/cern.ch/user/l/lumipro/public/Normtags/normtag_PHYSICS.json -u /fb -i /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions17/13TeV/Era/Prompt/Cert_294927-297019_13TeV_PromptReco_Collisions17_JSON_eraA.txt
+brilcalc lumi -b "STABLE BEAMS" --normtag /afs/cern.ch/user/l/lumipro/public/Normtags/normtag_PHYSICS.json -u /fb -i /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions17/13TeV/Era/Prompt/Cert_294927-297019_13TeV_PromptReco_Collisions17_JSON_eraB.txt
+brilcalc lumi -b "STABLE BEAMS" --normtag /afs/cern.ch/user/l/lumipro/public/Normtags/normtag_PHYSICS.json -u /fb -i /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions17/13TeV/Era/Prompt/Cert_294927-297019_13TeV_PromptReco_Collisions17_JSON_eraC.txt
+brilcalc lumi -b "STABLE BEAMS" --normtag /afs/cern.ch/user/l/lumipro/public/Normtags/normtag_PHYSICS.json -u /fb -i /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions17/13TeV/Era/Prompt/Cert_294927-297019_13TeV_PromptReco_Collisions17_JSON_eraD.txt
+brilcalc lumi -b "STABLE BEAMS" --normtag /afs/cern.ch/user/l/lumipro/public/Normtags/normtag_PHYSICS.json -u /fb -i /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions17/13TeV/Era/Prompt/Cert_294927-297019_13TeV_PromptReco_Collisions17_JSON_eraE.txt
+brilcalc lumi -b "STABLE BEAMS" --normtag /afs/cern.ch/user/l/lumipro/public/Normtags/normtag_PHYSICS.json -u /fb -i /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions17/13TeV/Era/Prompt/Cert_294927-297019_13TeV_PromptReco_Collisions17_JSON_eraF.txt
+```
