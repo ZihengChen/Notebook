@@ -29,7 +29,7 @@ git cms-addpkg RecoLocalCalo/HGCalRecAlgos
 scram b -j 
 ```
 
-# 2. Get Production Configurations
+# 2. Get the Production Configurations
 
 To find all relevant workflows, go outside the CMS release folder and use `runTheMatrix.py -w upgrade -n | grep D35 |grep 1p7`
 (D35 for the geometry, 1p7 for minEta) and will see the following output. Grab the workflow you want to use.
@@ -49,6 +49,14 @@ To get the configuration files of a given workflow (i.e. SingleGamma without pil
 runTheMatrix.py -w upgrade -l 27490.0 -t 4 -j 0
 ```
 where `27490.0` is the workflow ID, `-t` is number of threads, and `-j` is the number of jobs (`-j 0` won't run the configuration)
+
+
+Alternatively, you can modify the step1 to generate events just in front of HGCAL. To do that, run
+
+```
+git cms-merge-topic rovere:CloseByGunGenerator
+```
+in the `src` folder of the CMSSW release, and modify step1 to use the CloseByParticleGunProducer. Also select the particle you want to produce (22 for photons, -11 for electrons, 13 for muons and 211 for neutral pions.
 
 
 # 3. Run Configuration and Produce events
@@ -137,3 +145,5 @@ if reRunClustering:
 else:
     process.p = cms.Path(process.ana)
 ```
+
+Finally, run step4 to get the last NTUPLE root file.
