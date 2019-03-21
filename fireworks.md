@@ -13,3 +13,8 @@ hdiutil attach fireworks-mojave-10.3.sparseimage
 cd /Volumes/Fireworks/bin 
 ./cmsShow data.root 
 ```
+
+To show HGCal
+```
+/Volumes/Fireworks/bin/cmsShow --geom-file cmsRecoGeom-2023.root step3.root
+```
