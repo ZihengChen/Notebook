@@ -55,7 +55,9 @@ By running these script, the result from `brilcalc` is listed in the following t
 | 2016G |               7.865 |              7.576 |
 | 2016H |               8.985 |              8.651 |
 | **total** |      **37.462** |         **35.922** |
-  
+ 
+
+This is the same as hn [post](https://hypernews.cern.ch/HyperNews/CMS/get/luminosity/688.html) about LUM-17-001.
 
 ### 2.1 Example: 2017 promptReco
 For 2017 A-F, era-split json are: `/afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions17/13TeV/Era/Prompt/`
