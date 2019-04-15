@@ -1,3 +1,4 @@
+## Setup up for NVIDIA Hachathon
 
 Setup CMSSW_10_6_0_pre2 following [Simple recipe for developing with Patatrack](https://patatrack.web.cern.ch/patatrack//wiki/PatatrackDevelopment.html)
 
@@ -27,7 +28,7 @@ git cms-addpkg RecoLocalCalo/HGCalRecProducers
 ```
 
 
-when merging `lecriste:hack5_Leo`, there might be a small merge confict issue. In this case, you will at the branch `merge-attempt`. To solve this confliction, one just needs to modify *RecoLocalCalo/HGCalRecAlgos/interface/HGCalImagingAlgo.h*. Then commit and merge again to your branch.
+**Note** when merging `lecriste:hack5_Leo`, there might be a small merge confict issue. In this case, you will at the branch `merge-attempt`. To solve this confliction, one just needs to modify *RecoLocalCalo/HGCalRecAlgos/interface/HGCalImagingAlgo.h*. Then commit and merge again to your branch.
 
 ```
 git checkout hack_zichen
@@ -42,3 +43,28 @@ git add ...
 git commit
 git push -u my-cmssw HEAD:hack_zichen
 ```
+## Run Clustering on GPU
+
+Get cmsRun configurations with 
+```
+runTheMatrix.py -w upgrade -l 27434.0 -t 4 -j 0
+```
+
+Then do cmsRun step1-3.py to run the reconstruction.
+
+**Note** if the step3.py gots segementation violation, quick fix is to comment out line 145-155 in *RecoLocalCalo/HGCalRecAlgos/src/HGCalImagingAlgo.cc*
+
+```
+     // std::vector<size_t> rs = sorted_indices(points_[i]);
+      // std::vector<size_t> rsGPU = sorted_indices(recHitsGPU[i]);
+      // for(size_t zz = 0; zz < 10; ++zz){
+      //   std::cout << "\npoint \n" <<
+      //   points_[i][rs[zz]].data.delta << ", " <<
+      //   points_[i][rs[zz]].data.nearestHigher << std::endl;
+
+      //   std::cout << "recHit \n" <<
+      //   recHitsGPU[i][rsGPU[zz]].delta << ", " <<
+      //   recHitsGPU[i][rsGPU[zz]].nearestHigher << std::endl;
+      // }
+```
+
