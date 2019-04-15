@@ -20,14 +20,25 @@ scram b -j
 ```
 
 
-Then checkout the 
+Then chekcout Leo's branch. And get HGCalRecProducers to ntuplize Reco file into flat ntuple.
 ```
 git cms-merge-topic lecriste:hack5_Leo
 git cms-addpkg RecoLocalCalo/HGCalRecProducers
 ```
 
+
+when merging `lecriste:hack5_Leo`, there might be a small merge confict issue. In this case, you will at the branch `merge-attempt`. To solve this confliction, one just needs to modify *RecoLocalCalo/HGCalRecAlgos/interface/HGCalImagingAlgo.h*. Then commit and merge again to your branch.
+
+```
+git checkout hack_zichen
+git merge merge-attempt
+```
+
+
+
+In the end, make your modificationa and add,commit and push to your cmssw fork.
 ```
 git add ...
 git commit
-git push -u my-cmssw HEAD:my_development_branch
+git push -u my-cmssw HEAD:hack_zichen
 ```
