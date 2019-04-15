@@ -27,8 +27,7 @@ git cms-merge-topic lecriste:hack5_Leo
 git cms-addpkg RecoLocalCalo/HGCalRecProducers
 ```
 
-
-**Note** when merging `lecriste:hack5_Leo`, there might be a small merge confict issue. In this case, you will at the branch `merge-attempt`. To solve this confliction, one just needs to modify *RecoLocalCalo/HGCalRecAlgos/interface/HGCalImagingAlgo.h*. Then commit and merge again to your branch.
+> when merging `lecriste:hack5_Leo`, there might be a small merge confict issue. In this case, you will at the branch `merge-attempt`. To solve this confliction, one just needs to modify *RecoLocalCalo/HGCalRecAlgos/interface/HGCalImagingAlgo.h*. Then commit and merge again to your branch.
 
 ```
 git checkout hack_zichen
