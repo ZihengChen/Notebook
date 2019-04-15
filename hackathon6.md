@@ -1,6 +1,6 @@
 ## Setup up for NVIDIA Hachathon
 
-Setup CMSSW_10_6_0_pre2 following [Simple recipe for developing with Patatrack](https://patatrack.web.cern.ch/patatrack//wiki/PatatrackDevelopment.html)
+1. Setup CMSSW_10_6_0_pre2 following [Simple recipe for developing with Patatrack](https://patatrack.web.cern.ch/patatrack//wiki/PatatrackDevelopment.html)
 
 ```
 export SCRAM_ARCH=slc7_amd64_gcc700
@@ -21,13 +21,13 @@ scram b -j
 ```
 
 
-Then chekcout Leo's branch. And get HGCalRecProducers to ntuplize Reco file into flat ntuple.
+2. Then chekcout Leo's branch. And get HGCalRecProducers to ntuplize Reco file into flat ntuple.
 ```
 git cms-merge-topic lecriste:hack5_Leo
 git cms-addpkg RecoLocalCalo/HGCalRecProducers
 ```
 
-> when merging `lecriste:hack5_Leo`, there might be a small merge confict issue. In this case, you will at the branch `merge-attempt`. To solve this confliction, one just needs to modify *RecoLocalCalo/HGCalRecAlgos/interface/HGCalImagingAlgo.h*. Then commit and merge again to your branch.
+> **Note** when merging `lecriste:hack5_Leo`, there might be a small merge confict issue. In this case, you will at the branch `merge-attempt`. To solve this confliction, one just needs to modify *RecoLocalCalo/HGCalRecAlgos/interface/HGCalImagingAlgo.h*. Then commit and merge again to your branch.
 
 ```
 git checkout hack_zichen
@@ -36,7 +36,7 @@ git merge merge-attempt
 
 
 
-In the end, make your modificationa and add,commit and push to your cmssw fork.
+3. In the end, make your modificationa and add,commit and push to your cmssw fork.
 ```
 git add ...
 git commit
@@ -51,7 +51,7 @@ runTheMatrix.py -w upgrade -l 27434.0 -t 4 -j 0
 
 Then do cmsRun step1-3.py to run the reconstruction.
 
-**Note** if the step3.py gots segementation violation, quick fix is to comment out line 145-155 in *RecoLocalCalo/HGCalRecAlgos/src/HGCalImagingAlgo.cc*
+> **Note** if the step3.py gots segementation violation, quick fix is to comment out line 145-155 in *RecoLocalCalo/HGCalRecAlgos/src/HGCalImagingAlgo.cc*
 
 ```
      // std::vector<size_t> rs = sorted_indices(points_[i]);
