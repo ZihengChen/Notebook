@@ -27,7 +27,7 @@ git cms-merge-topic lecriste:hack5_Leo
 git cms-addpkg RecoLocalCalo/HGCalRecProducers
 ```
 
-> **Note** when merging `lecriste:hack5_Leo`, there might be a small merge confict issue. In this case, you will at the branch `merge-attempt`. To solve this confliction, one just needs to modify *RecoLocalCalo/HGCalRecAlgos/interface/HGCalImagingAlgo.h*. Then commit and merge again to your branch.
+> **[Note]** when merging `lecriste:hack5_Leo`, there might be a small merge confict issue. In this case, you will at the branch `merge-attempt`. To solve this confliction, one just needs to modify *RecoLocalCalo/HGCalRecAlgos/interface/HGCalImagingAlgo.h*. Then commit and merge again to your branch.
 
 ```
 git checkout hack_zichen
@@ -51,7 +51,7 @@ runTheMatrix.py -w upgrade -l 27434.0 -t 4 -j 0
 
 Then do cmsRun step1-3.py to run the reconstruction.
 
-> **Note** if the step3.py gots segementation violation, quick fix is to comment out line 145-155 in *RecoLocalCalo/HGCalRecAlgos/src/HGCalImagingAlgo.cc*
+> **[Note]** if the step3.py gots segementation violation, quick fix is to comment out line 145-155 in *RecoLocalCalo/HGCalRecAlgos/src/HGCalImagingAlgo.cc*
 
 ```c++
 std::vector<size_t> rs = sorted_indices(points_[i]);
