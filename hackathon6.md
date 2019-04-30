@@ -1,5 +1,25 @@
 ## Setup up for NVIDIA Hachathon
 
+
+```
+export SCRAM_ARCH=slc7_amd64_gcc700
+source /data/cmssw/cmsset_default.sh
+
+scram list CMSSW_10_6_0_pre2
+cmsrel CMSSW_10_6_0_pre2_Patatrack
+cd CMSSW_10_6_0_pre2_Patatrack/src
+cmsenv
+
+git cms-init 
+git fetch my-cmssw
+git branch --track my-cmssw/milestone
+
+git cms-addpkg $(git diff $CMSSW_VERSION --name-only | cut -d/ -f-2 | sort -u)
+git cms-checkdeps -a
+scram b -j
+```
+
+
 1. Setup CMSSW_10_6_0_pre2 following [Simple recipe for developing with Patatrack](https://patatrack.web.cern.ch/patatrack//wiki/PatatrackDevelopment.html)
 
 ```
