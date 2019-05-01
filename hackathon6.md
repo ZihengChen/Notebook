@@ -27,6 +27,9 @@ git cms-checkdeps -a
 scram b -j
 ```
 
+---
+skip the following
+---
 
 1. Setup CMSSW_10_6_0_pre2 following [Simple recipe for developing with Patatrack](https://patatrack.web.cern.ch/patatrack//wiki/PatatrackDevelopment.html)
 
