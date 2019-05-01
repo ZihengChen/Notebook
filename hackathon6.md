@@ -10,9 +10,17 @@ cmsrel CMSSW_10_6_0_pre2_Patatrack
 cd CMSSW_10_6_0_pre2_Patatrack/src
 cmsenv
 
-git cms-init 
-git fetch my-cmssw
-git branch --track my-cmssw/milestone
+git cms-init -x cms-patatrack
+
+git remote add ziheng https://github.com/ZihengChen/cmssw.git
+git fetch ziheng
+git branch milestone --track ziheng/milestone
+git checkout milestone
+
+
+#git fetch my-cmssw
+#git branch milestone --track my-cmssw/milestone
+#git checkout milestone
 
 git cms-addpkg $(git diff $CMSSW_VERSION --name-only | cut -d/ -f-2 | sort -u)
 git cms-checkdeps -a
