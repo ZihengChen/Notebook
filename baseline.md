@@ -1,3 +1,4 @@
+```
 cmsrel CMSSW_11_0_X_2019-06-11-2300
 cd CMSSW_11_0_X_2019-06-11-2300/src/
 cmsenv
@@ -20,3 +21,4 @@ git checkout HGCal_Tiling_GPU_V2
 git rebase -m -X theirs from-CMSSW_11_0_X_2019-06-11-2300 
 git cms-addpkg HeterogeneousCore
 scram b -j
+```
