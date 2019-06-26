@@ -40,7 +40,6 @@ source $VO_CMS_SW_DIR/cmsset_default.sh
 source /cvmfs/cms.cern.ch/crab3/crab.sh
 
 crab submit -c crab_TT_powheg.py 
-
 ```
 You can query the status by `crab status -d <PROJECT/DIR>`
 
