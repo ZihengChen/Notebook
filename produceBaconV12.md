@@ -30,6 +30,19 @@ scram b -j
 
 ## 2. Crab Config
 Before submit to crab, do a local test first `cmsRun makingBacon_MC_25ns_MINIAOD.py`.
+If local test run goes smoothly, you can submit crab
+
+```
+voms-proxy-init --voms cms
+which grid-proxy-info
+export VO_CMS_SW_DIR=/cvmfs/cms.cern.ch
+source $VO_CMS_SW_DIR/cmsset_default.sh
+source /cvmfs/cms.cern.ch/crab3/crab.sh
+
+crab submit -c crab_TT_powheg.py 
+
+```
+You can query the status by `crab status -d <PROJECT/DIR>`
 
 An axample of crab config is like following
 
