@@ -2,7 +2,7 @@
 
 ## 1. Setup Bacon V12
 
-```
+```shell
 source /cvmfs/cms.cern.ch/cmsset_default.sh
 export SCRAM_ARCH=slc6_amd64_gcc491
 cmsrel CMSSW_8_0_24_patch1
@@ -29,6 +29,8 @@ scram b -j
 
 
 ## 2. Crab Config
+Before submit to crab, do a local test first `cmsRun makingBacon_MC_25ns_MINIAOD.py`.
+
 An axample of crab config is like following
 
 ```python
