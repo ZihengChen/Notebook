@@ -29,8 +29,7 @@ scram b -j
 
 
 ## 2. Crab Config
-Before submit to crab, do a local test first `cmsRun makingBacon_MC_25ns_MINIAOD.py`.
-If local test run goes smoothly, you can submit crab
+Before submitting to crab, do a local test first `cmsRun makingBacon_MC_25ns_MINIAOD.py`. If local test run goes smoothly, you can now submit to crab
 
 ```
 voms-proxy-init --voms cms
