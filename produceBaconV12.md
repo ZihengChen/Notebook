@@ -40,6 +40,8 @@ crab submit -c crab_TT_powheg.py
 ```
 You can query the status by `crab status -d <PROJECT/DIR>`
 
+You can kill jobs by `crab kill -d <PROJECT/DIR>`
+
 An axample of crab config is like following
 
 ```python
