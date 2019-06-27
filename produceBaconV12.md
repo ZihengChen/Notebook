@@ -32,11 +32,9 @@ scram b -j
 Before submitting to crab, do a local test first `cmsRun makingBacon_MC_25ns_MINIAOD.py`. If local test run goes smoothly, you can now submit to crab
 
 ```
-export VO_CMS_SW_DIR=/cvmfs/cms.cern.ch
-source $VO_CMS_SW_DIR/cmsset_default.sh
-voms-proxy-init --rfc --voms cms
-which grid-proxy-info
+source /cvmfs/cms.cern.ch/cmsset_default.sh
 source /cvmfs/cms.cern.ch/crab3/crab.sh
+voms-proxy-init --rfc --voms cms
 
 crab submit -c crab_TT_powheg.py 
 ```
