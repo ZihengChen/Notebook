@@ -28,8 +28,8 @@ at the version used in DESY testbeam 2019/
 wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/bcm1f_tbreader/VMEReader.cxx -O main/exe/src/VMEReader.cxx
 wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/bcm1f_tbreader/ubcmReader.cxx -O main/exe/src/ubcmReader.cxx
 wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/bcm1f_tbreader/CMakeLists.txt -O main/exe/CMakeLists.txt
-wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/bcm1f_tbreader/ubcmConverterPlugin.cc main/lib/plugins/ubcmConverterPlugin.cc
-wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/bcm1f_tbreader/VMEConverterPlugin.cc main/lib/plugins/VMEConverterPlugin.cc
+wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/bcm1f_tbreader/ubcmConverterPlugin.cc -O main/lib/plugins/ubcmConverterPlugin.cc
+wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/bcm1f_tbreader/VMEConverterPlugin.cc -O main/lib/plugins/VMEConverterPlugin.cc
 ```
 Then build again
 
