@@ -39,6 +39,11 @@ in `eudaq`
 ```
 wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/bcm1f_tbreader/runRawToCsv.py -O runRawToCsv.py
 ```
-The raw file on
+The raw file locations are
+
+* **brillab186** `/localdata/TestBeamMay2019/bcm1f_2019/`
+* **brilutca3** `/localdata/bcm1f_testbeamDESY2019/`
+
+
 please edit the output directory in `runRawToCsv.py` and then `python runRawToCsv.py`
 
