@@ -25,7 +25,7 @@ int main(int /*argc*/, const char ** argv) {
     
     std::ofstream rawFile_eventFeatures;
     rawFile_eventFeatures.open(outputPath + "/VME_run"+runnb+"_eventFeatures.csv");
-    rawFile_eventFeatures << "event,ch,pulseAmp,pulsePos,baseline_mean,baseline_std\n";
+    rawFile_eventFeatures << "event,ch,pulseAmp,pulsePos,pulseFWHM,baseline_mean,baseline_std\n";
 
     int ievent = 0;
     while (reader.NextEvent()) {
@@ -64,8 +64,39 @@ int main(int /*argc*/, const char ** argv) {
           baseline_std = sqrt(baseline_std/nBaselineSample-baseline_mean*baseline_mean);
           pulseAmp = fabs(pulseAmp - baseline_mean);
           pulseAmp_sigmaNoise = pulseAmp/baseline_std;
+
+          // calculate FWHM
+          float pulseFWHM=0;
+          float FWHMThreshold = 0.5*pulseAmp+baseline_mean;
+          // left intersection with FWHMThreshold
+          for (int ishift=1; ishift<100; ishift++){
+            int idx = pulsePos-ishift;
+            unsigned int value_int = (unsigned int) buffer[idx];
+            float value = float (value_int);
+            unsigned int previousValue_int = (unsigned int) buffer[idx+1];
+            float previousValue = float (previousValue_int);
+            if (value < FWHMThreshold){
+              float shift = ishift - fabs(value-FWHMThreshold)/fabs(value-previousValue);
+              pulseFWHM += shift;
+              break;
+            }
+          }
+          // right intersection with FWHMThreshold
+          for (int ishift=1; ishift<100; ishift++){
+            int idx = pulsePos+ishift;
+            unsigned int value_int = (unsigned int) buffer[idx];
+            float value = float (value_int);
+            unsigned int previousValue_int = (unsigned int) buffer[idx-1];
+            float previousValue = float (previousValue_int);
+            if (value < FWHMThreshold){
+              float shift = ishift - fabs(value-FWHMThreshold)/fabs(value-previousValue);
+              pulseFWHM += shift;
+              break;
+            }
+          }
+
           // save fulse into csv file
-          rawFile_eventFeatures << ievent << "," << ich << "," << pulseAmp << "," << pulsePos  << "," << baseline_mean << "," << baseline_std << "\n";    
+          rawFile_eventFeatures << ievent << "," << ich << "," << pulseAmp << "," << pulsePos << "," << pulseFWHM << "," << baseline_mean << "," << baseline_std << "\n";
 
 
           //std::cout << " CHANNEL " << ich << std::endl;
