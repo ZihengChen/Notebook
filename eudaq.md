@@ -30,7 +30,12 @@ wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/bcm1f_tbreader
 wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/bcm1f_tbreader/CMakeLists.txt -O main/exe/CMakeLists.txt
 wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/bcm1f_tbreader/ubcmConverterPlugin.cc -O main/lib/plugins/ubcmConverterPlugin.cc
 wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/bcm1f_tbreader/VMEConverterPlugin.cc -O main/lib/plugins/VMEConverterPlugin.cc
-wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/bcm1f_tbreader/runRawToCsv.py -O runRawToCsv.py
 ```
 Then build again
+
+### to read raw and make csv
+```
+wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/bcm1f_tbreader/runRawToCsv.py -O runRawToCsv.py
+```
+edit the output directory in `runRawToCsv.py` and then `python runRawToCsv.py`
 
