@@ -17,13 +17,14 @@ int main(int /*argc*/, const char ** argv) {
     std::cout << "Opened file:" << reader.Filename() << std::endl;
 
 
-    std::string runnb(argv[2]); 
+    std::string outputPath(argv[2]);
+    std::string runnb(argv[3]);
     //CSV file test
     //std::ofstream rawFile;
-    //rawFile.open("/localdata/TestBeamMay2019_csv/ubcm_run"+runnb+".csv");
+    //rawFile.open(outputPath + "/VME_run"+runnb+".csv");
     
     std::ofstream rawFile_eventFeatures;
-    rawFile_eventFeatures.open("/localdata/TestBeamMay2019_csv/VME_run" + runnb + "_eventFeatures.csv");
+    rawFile_eventFeatures.open(outputPath + "/VME_run"+runnb+"_eventFeatures.csv");
     rawFile_eventFeatures << "event,ch,pulseAmp,pulsePos,baseline_mean,baseline_std\n";
 
     int ievent = 0;
