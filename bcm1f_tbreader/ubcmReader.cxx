@@ -27,10 +27,10 @@ int main(int /*argc*/, const char ** argv) {
     std::string runnb(argv[2]);
     //CSV file test
     //std::ofstream rawFile;
-    //rawFile.open("/afs/cern.ch/user/z/zichen/public/BRIL/eudaq/data/ubcm_run" + runnb + ".csv");
+    //rawFile.open("/localdata/TestBeamMay2019_csv/ubcm_run" + runnb + ".csv");
     
     std::ofstream rawFile_eventFeatures;
-    rawFile_eventFeatures.open("/afs/cern.ch/user/z/zichen/public/BRIL/eudaq/data/ubcm_run" + runnb + "_eventFeatures.csv");
+    rawFile_eventFeatures.open("/localdata/TestBeamMay2019_csv/ubcm_run" + runnb + "_eventFeatures.csv");
     rawFile_eventFeatures << "event,ch,pulseAmp,pulsePos,baseline_mean,baseline_std\n";
     
     int ievent = 0;
@@ -98,7 +98,7 @@ int main(int /*argc*/, const char ** argv) {
       }
       // increase ievent
       ievent ++;
-      if (ievent%10000 == 0) std::cout << " -- processing event " << ievent << std::endl;
+      //if (ievent%10000 == 0) std::cout << " -- processing event " << ievent << std::endl;
 
     }
 
