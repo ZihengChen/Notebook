@@ -4,14 +4,14 @@ sudo yum install root eigen3-devel gsl gsl-devel wget automake gcc-c++ gcc-gfort
 sudo yum groupinstall 'Development Tools'
 ```
 
-### setup eudaq v.1.9.1
+### To setup eudaq v.1.9.1
 ```bash
 git clone -b v1.x-dev https://github.com/eudaq/eudaq.git
 cd eudaq/
 git checkout v1.9.1 
 ```
 
-### to build eudaq
+### To build eudaq
 ```
 cd build
 cmake3 -L ..
@@ -20,7 +20,7 @@ cd ..
 ```
 
 
-### To Setup the vme,ubcm readers 
+### To setup the vme,ubcm readers 
 
 at the version used in DESY testbeam 2019/
 
@@ -33,7 +33,8 @@ wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/bcm1f_tbreader
 ```
 Then build again
 
-### to read raw and make csv
+### To read raw and make csv
+in `eudaq`
 ```
 wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/bcm1f_tbreader/runRawToCsv.py -O runRawToCsv.py
 ```
