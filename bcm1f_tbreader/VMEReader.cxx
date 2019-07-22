@@ -85,7 +85,7 @@ int main(int /*argc*/, const char ** argv) {
       
     ievent++;
 
-    if (ievent%10000 == 0) std::cout << " -- processing event " << ievent << std::endl;
+    // if (ievent%10000 == 0) std::cout << " -- processing event " << ievent << std::endl;
     
     } 
     //rawFile.close(); 
