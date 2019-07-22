@@ -67,7 +67,7 @@ int main(int /*argc*/, const char ** argv) {
 
           // calculate FWHM
           float pulseFWHM=0;
-          float FWHMThreshold = 0.5*pulseAmp+baseline_mean;
+          float FWHMThreshold = -0.5*pulseAmp+baseline_mean;
           // left intersection with FWHMThreshold
           for (int ishift=1; ishift<100; ishift++){
             int idx = pulsePos-ishift;
@@ -75,8 +75,8 @@ int main(int /*argc*/, const char ** argv) {
             float value = float (value_int);
             unsigned int previousValue_int = (unsigned int) buffer[idx+1];
             float previousValue = float (previousValue_int);
-            if (value < FWHMThreshold){
-              float shift = ishift - fabs(value-FWHMThreshold)/fabs(value-previousValue);
+            if (value > FWHMThreshold){
+              float shift = float(ishift) - fabs(value-FWHMThreshold)/fabs(value-previousValue);
               pulseFWHM += shift;
               break;
             }
@@ -88,8 +88,8 @@ int main(int /*argc*/, const char ** argv) {
             float value = float (value_int);
             unsigned int previousValue_int = (unsigned int) buffer[idx-1];
             float previousValue = float (previousValue_int);
-            if (value < FWHMThreshold){
-              float shift = ishift - fabs(value-FWHMThreshold)/fabs(value-previousValue);
+            if (value > FWHMThreshold){
+              float shift = float(ishift) - fabs(value-FWHMThreshold)/fabs(value-previousValue);
               pulseFWHM += shift;
               break;
             }
