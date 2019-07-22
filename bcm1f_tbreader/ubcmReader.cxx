@@ -91,7 +91,7 @@ int main(int /*argc*/, const char ** argv) {
             unsigned int previousValue_int = (unsigned int) buffer[idx+1];
             float previousValue = float (previousValue_int);
             if (value < FWHMThreshold){
-              float shift = ishift - fabs(value-FWHMThreshold)/fabs(value-previousValue);
+              float shift = float(ishift) - fabs(value-FWHMThreshold)/fabs(value-previousValue);
               pulseFWHM += shift;
               break;
             }
@@ -104,7 +104,7 @@ int main(int /*argc*/, const char ** argv) {
             unsigned int previousValue_int = (unsigned int) buffer[idx-1];
             float previousValue = float (previousValue_int);
             if (value < FWHMThreshold){
-              float shift = ishift - fabs(value-FWHMThreshold)/fabs(value-previousValue);
+              float shift = float(ishift) - fabs(value-FWHMThreshold)/fabs(value-previousValue);
               pulseFWHM += shift;
               break;
             }
