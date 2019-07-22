@@ -24,8 +24,6 @@ cd ..
 
 ### To setup the vme,ubcm readers 
 
-at the version used in DESY testbeam 2019/
-
 ```
 wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/bcm1f_tbreader/VMEReader.cxx -O main/exe/src/VMEReader.cxx
 wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/bcm1f_tbreader/ubcmReader.cxx -O main/exe/src/ubcmReader.cxx
