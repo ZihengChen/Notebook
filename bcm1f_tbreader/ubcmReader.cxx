@@ -24,13 +24,14 @@ int main(int /*argc*/, const char ** argv) {
     // Display the actual filename (argument could have been a run number)
     std::cout << "Opened file: " << reader.Filename() << std::endl;
     
-    std::string runnb(argv[2]);
+    std::string outputPath(argv[2]);
+    std::string runnb(argv[3]);
     //CSV file test
     //std::ofstream rawFile;
-    //rawFile.open("/localdata/TestBeamMay2019_csv/ubcm_run" + runnb + ".csv");
+    //rawFile.open(outputPath + "/ubcm_run"+runnb+".csv");
     
     std::ofstream rawFile_eventFeatures;
-    rawFile_eventFeatures.open("/localdata/TestBeamMay2019_csv/ubcm_run" + runnb + "_eventFeatures.csv");
+    rawFile_eventFeatures.open( outputPath + "/ubcm_run"+runnb+"_eventFeatures.csv");
     rawFile_eventFeatures << "event,ch,pulseAmp,pulsePos,baseline_mean,baseline_std\n";
     
     int ievent = 0;
