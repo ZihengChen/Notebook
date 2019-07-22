@@ -4,14 +4,14 @@ sudo yum install root eigen3-devel gsl gsl-devel wget automake gcc-c++ gcc-gfort
 sudo yum groupinstall 'Development Tools'
 ```
 
-# setup eudaq v.1.9.1
+### setup eudaq v.1.9.1
 ```bash
 git clone -b v1.x-dev https://github.com/eudaq/eudaq.git
 cd eudaq/
 git checkout v1.9.1 
 ```
 
-# to build eudaq
+### to build eudaq
 ```
 cd build
 cmake3 -L ..
@@ -20,7 +20,7 @@ cd ..
 ```
 
 
-# To Setup the vme,ubcm readers 
+### To Setup the vme,ubcm readers 
 
 at the version used in DESY testbeam 2019/
 
@@ -31,4 +31,5 @@ wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/bcm1f_tbreader
 wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/bcm1f_tbreader/ubcmConverterPlugin.cc main/lib/plugins/ubcmConverterPlugin.cc
 wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/bcm1f_tbreader/VMEConverterPlugin.cc main/lib/plugins/VMEConverterPlugin.cc
 ```
+Then build again
 
