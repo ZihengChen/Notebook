@@ -40,10 +40,11 @@ in `eudaq`
 ```
 wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/bcm1f_tbreader/runRawToCsv.py -O runRawToCsv.py
 ```
-The raw file locations are
+The copies of raw data are located
 
 * **brillab186** `/localdata/TestBeamMay2019/bcm1f_2019/`
 * **brilutca3** `/localdata/bcm1f_testbeamDESY2019/`
+* **DESY** need specification
 
 
 please edit the output directory in `runRawToCsv.py` and then `python runRawToCsv.py`
