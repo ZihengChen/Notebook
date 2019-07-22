@@ -4,27 +4,31 @@ sudo yum install root eigen3-devel gsl gsl-devel wget automake gcc-c++ gcc-gfort
 sudo yum groupinstall 'Development Tools'
 ```
 
-setup eudaq v.1.9.1
+# setup eudaq v.1.9.1
 ```bash
 git clone -b v1.x-dev https://github.com/eudaq/eudaq.git
 cd eudaq/
 git checkout v1.9.1 
+```
+
+# to build eudaq
+```
 cd build
-cmake3 -L -DBUILD_tlu=ON ..
+cmake3 -L ..
 make install -j 4
 cd ..
 ```
 
-It might be useful to have the following functions in your `.bashrc`
 
-```bash
-mk() {
-	cd /afs/cern.ch/user/z/zichen/public/BRIL/eudaq/build
-	make install
-	cd ..
-}
+# To Setup the vme,ubcm readers 
 
-run() {
-	bash /afs/cern.ch/user/z/zichen/public/BRIL/eudaq/etc/scripts/STARTRUN.$1
-}
+at the version used in DESY testbeam 2019/
+
 ```
+wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/bcm1f_tbreader/VMEReader.cxx -O main/exe/src/VMEReader.cxx
+wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/bcm1f_tbreader/ubcmReader.cxx -O main/exe/src/ubcmReader.cxx
+wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/bcm1f_tbreader/CMakeLists.txt -O main/exe/CMakeLists.txt
+wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/bcm1f_tbreader/ubcmConverterPlugin.cc main/lib/plugins/ubcmConverterPlugin.cc
+wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/bcm1f_tbreader/VMEConverterPlugin.cc main/lib/plugins/VMEConverterPlugin.cc
+```
+
