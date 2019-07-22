@@ -1,4 +1,5 @@
-first make sure you install all package 
+first make sure you install prerequisite packages. on `brillab186` these packages are installed.
+
 ```bash
 sudo yum install root eigen3-devel gsl gsl-devel wget automake gcc-c++ gcc-gfortran subversion java-1.8.0-openjdk-devel libX11-devel libXpm-devel libXft-devel libXext-devel python-devel tar make cmake which devtoolset-6-gcc-c++ rh-git29 qt5-qtbase-devel openssh-server build-essential xterm.x86_64  zlib-devel
 sudo yum groupinstall 'Development Tools'
@@ -38,5 +39,6 @@ in `eudaq`
 ```
 wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/bcm1f_tbreader/runRawToCsv.py -O runRawToCsv.py
 ```
-edit the output directory in `runRawToCsv.py` and then `python runRawToCsv.py`
+The raw file on
+please edit the output directory in `runRawToCsv.py` and then `python runRawToCsv.py`
 
