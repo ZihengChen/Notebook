@@ -1,4 +1,5 @@
 
+
 #include "eudaq/FileReader.hh"
 #include "eudaq/PluginManager.hh"
 #include "eudaq/OptionParser.hh"
@@ -25,7 +26,7 @@ int main(int /*argc*/, const char ** argv) {
     
     std::ofstream rawFile_eventFeatures;
     rawFile_eventFeatures.open(outputPath + "/VME_run"+runnb+"_eventFeatures.csv");
-    rawFile_eventFeatures << "event,ch,pulseAmp,pulsePos,pulseFWHM,baseline_mean,baseline_std\n";
+    rawFile_eventFeatures << "event,ch,pulseAmp,pulsePos,pulseFWHM,pulseIntegral,pulseMaxSlope,baseline_mean,baseline_std\n";
 
     int ievent = 0;
     while (reader.NextEvent()) {
@@ -65,12 +66,13 @@ int main(int /*argc*/, const char ** argv) {
           pulseAmp = fabs(pulseAmp - baseline_mean);
           pulseAmp_sigmaNoise = pulseAmp/baseline_std;
 
-          // calculate FWHM
+          // MARK -- calculate FWHM
           float pulseFWHM=0;
           float FWHMThreshold = -0.5*pulseAmp+baseline_mean;
           // left intersection with FWHMThreshold
           for (int ishift=1; ishift<100; ishift++){
             int idx = pulsePos-ishift;
+            if (idx<1 || idx>=buffer.size()-1) continue;
             unsigned int value_int = (unsigned int) buffer[idx];
             float value = float (value_int);
             unsigned int previousValue_int = (unsigned int) buffer[idx+1];
@@ -84,6 +86,7 @@ int main(int /*argc*/, const char ** argv) {
           // right intersection with FWHMThreshold
           for (int ishift=1; ishift<100; ishift++){
             int idx = pulsePos+ishift;
+            if (idx<1 || idx>=buffer.size()-1) continue;
             unsigned int value_int = (unsigned int) buffer[idx];
             float value = float (value_int);
             unsigned int previousValue_int = (unsigned int) buffer[idx-1];
@@ -95,8 +98,24 @@ int main(int /*argc*/, const char ** argv) {
             }
           }
 
+          // MARK -- calculate integral and max slope
+          float pulseIntegral=0;
+          float pulseMaxSlope=0;
+          for (int ishift=-100; ishift<=100; ishift++){
+            int idx = pulsePos+ishift;
+            if (idx<1 || idx>=buffer.size()-1) continue;
+            unsigned int value_int = (unsigned int) buffer[idx];
+            unsigned int previousValue_int = (unsigned int) buffer[idx-1];
+            float value = float (value_int);
+            float previousValue = float (previousValue_int);
+            pulseIntegral += -(value-baseline_mean);
+            if (fabs(previousValue-value)>pulseMaxSlope) {
+              pulseMaxSlope=fabs(previousValue-value);
+            }
+          }
+
           // save fulse into csv file
-          rawFile_eventFeatures << ievent << "," << ich << "," << pulseAmp << "," << pulsePos << "," << pulseFWHM << "," << baseline_mean << "," << baseline_std << "\n";
+          rawFile_eventFeatures << ievent << "," << ich << "," << pulseAmp << "," << pulsePos << "," << pulseFWHM << "," << pulseIntegral << "," << pulseMaxSlope << "," << baseline_mean << "," << baseline_std << "\n";
 
 
           //std::cout << " CHANNEL " << ich << std::endl;
