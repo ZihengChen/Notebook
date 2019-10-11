@@ -10,8 +10,10 @@ xlibmesa-glu-dev libglew1.5-dev libftgl-dev \
 libmysqlclient-dev libfftw3-dev libcfitsio-dev \
 graphviz-dev libavahi-compat-libdnssd-dev \
 libldap2-dev python-dev libxml2-dev libkrb5-dev \
-libgsl0-dev libqt4-dev
-sudo apt install mesa-utils libglew-dev libglew1.5-dev libglm-dev
+libgsl0-dev libqt4-dev freeglut3-dev
+
+
+#sudo apt install mesa-utils libglew-dev libglew1.5-dev libglm-dev
 
 anaconda 
 pip install -user gpustat
