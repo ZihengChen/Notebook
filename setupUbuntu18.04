@@ -1,17 +1,26 @@
 sudo apt update
-sudo apt install openssh-server build-essential htop glances libgtk2.0-0 openjdk-8-jdk
+sudo apt install openssh-server build-essential htop glances libgtk2.0-0 openjdk-8-jdk libcanberra-gtk-module libcanberra-gtk3-module
+
+java -version
+
+# manually change alternatives if java version != 8
+#sudo update-alternatives --config java
+#sudo update-alternatives --config javac
+#sudo update-alternatives --config javadoc
+#sudo update-alternatives --config javah
+#sudo update-alternatives --config javap
+
+# cuda
 wget http://developer.download.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda_10.1.243_418.87.00_linux.run
 sudo sh cuda_10.1.243_418.87.00_linux.run
 
 #root
 sudo apt-get install git dpkg-dev cmake g++ gcc binutils libx11-dev libxpm-dev libxft-dev libxext-dev
-sudo apt-get install gfortran libssl-dev libpcre3-dev \
-xlibmesa-glu-dev libglew1.5-dev libftgl-dev \
-libmysqlclient-dev libfftw3-dev libcfitsio-dev \
-graphviz-dev libavahi-compat-libdnssd-dev \
-libldap2-dev python-dev libxml2-dev libkrb5-dev \
-libgsl0-dev libqt4-dev freeglut3-dev 
-#sudo apt install mesa-utils libglew-dev libglew1.5-dev libglm-dev
+#sudo apt-get install gfortran libssl-dev libpcre3-dev xlibmesa-glu-dev libglew1.5-dev libftgl-dev libmysqlclient-dev libfftw3-dev libcfitsio-dev graphviz-dev libavahi-compat-libdnssd-dev libldap2-dev python-dev libxml2-dev libkrb5-dev libgsl0-dev libqt4-dev freeglut3-dev 
+ccmake # turn off opengl
+cmake build
 
-anaconda 
-pip install -user gpustat
+#anaconda 
+pip install -user gpustat 
+pip install torch torchvision
+pip install lmdb snli pandas root_pandas
