@@ -24,3 +24,13 @@ cmake build
 pip install -user gpustat 
 pip install torch torchvision
 pip install lmdb snli pandas root_pandas
+
+
+```
+export PATH=/home/zchen/.local/bin:$PATH
+# root
+source /home/zchen/root/bin/thisroot.sh
+# cuda
+export PATH=/usr/local/cuda/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:$LD_LIBRARY_PATH
+```
