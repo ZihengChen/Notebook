@@ -109,3 +109,30 @@ By running these script, the result from `brilcalc` is listed in the following t
 | 2017E |               9.760 |              9.278 |
 | 2017F |              14.303 |             13.540 |
 | **total** |      **44.203** |         **41.557** |
+
+
+### 2.2 Example: 2018 promptReco
+For 2018 A-E, era-split json are: `/afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions17/13TeV/Era/Prompt/`
+
+```shell
+brilcalc lumi -b "STABLE BEAMS" --normtag /afs/cern.ch/user/l/lumipro/public/Normtags/normtag_PHYSICS.json -u /fb -i /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions18/13TeV/Era/Prompt/Cert_315252-316995_13TeV_PromptReco_Collisions18_JSON_eraA.txt
+brilcalc lumi -b "STABLE BEAMS" --normtag /afs/cern.ch/user/l/lumipro/public/Normtags/normtag_PHYSICS.json -u /fb -i /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions18/13TeV/Era/Prompt/Cert_316998-319312_13TeV_PromptReco_Collisions18_JSON_eraB.txt
+brilcalc lumi -b "STABLE BEAMS" --normtag /afs/cern.ch/user/l/lumipro/public/Normtags/normtag_PHYSICS.json -u /fb -i /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions18/13TeV/Era/Prompt/Cert_319313-320393_13TeV_PromptReco_Collisions18_JSON_eraC.txt
+brilcalc lumi -b "STABLE BEAMS" --normtag /afs/cern.ch/user/l/lumipro/public/Normtags/normtag_PHYSICS.json -u /fb -i /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions18/13TeV/Era/Prompt/Cert_320394-325273_13TeV_PromptReco_Collisions18_JSON_eraD.txt
+brilcalc lumi -b "STABLE BEAMS" --normtag /afs/cern.ch/user/l/lumipro/public/Normtags/normtag_PHYSICS.json -u /fb -i /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions18/13TeV/Era/Prompt/Cert_325274-325765_13TeV_PromptReco_Collisions18_JSON_eraE.txt
+
+## total promptReco
+brilcalc lumi -b "STABLE BEAMS" --normtag /afs/cern.ch/user/l/lumipro/public/Normtags/normtag_PHYSICS.json -u /fb -i /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions18/13TeV/PromptReco/Cert_314472-325175_13TeV_PromptReco_Collisions18_JSON.txt
+```
+
+By running these script, the result from `brilcalc` is listed in the following table.
+
+
+|       | LHC delivered [/fb] | CMS recorded [/fb] |
+|-------|--------------------:|-------------------:|
+| 2018A |              14.480 |             13.978 |
+| 2018B |               7.325 |              7.064 |
+| 2018C |               7.157 |              6.899 |
+| 2018D |              33.208 |             31.748 |
+| 2018E |               0.000 |              0.000 |
+| **total** |      **62.169** |         **59.688** |
