@@ -67,3 +67,12 @@ config.Data.publication = False
 config.Data.outputDatasetTag = 'CRAB3'
 config.Site.storageSite = 'T2_CH_CERN'
 ```
+
+
+```
+./multicrab -c submit
+./multicrab -c resubmit -w MyDir -o '--maxmemory=5000'
+
+```
+
+
