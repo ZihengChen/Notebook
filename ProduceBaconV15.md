@@ -13,7 +13,7 @@ git clone git@github.com:NWUHEP/BaconProd.git
 
 # get multicrab
 cd BaconProd/Ntupler/config
-cp /uscms/home/zchen/nobackup/CMSSW_10_2_13/src/BaconProd/Ntupler/config/multicrab .
+wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/multicrab
 ```
  
 ## sumbit multicrab
