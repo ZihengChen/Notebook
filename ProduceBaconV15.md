@@ -7,6 +7,7 @@ cd ../..
 wget https://raw.githubusercontent.com/NWUHEP/BaconProd/master/scripts/setup_prod.sh
 source setup_prod.sh
 
+# get Bacon
 cd PATH/CMSSW_10_2_13/src
 git clone git@github.com:NWUHEP/BaconAna.git
 git clone git@github.com:NWUHEP/BaconProd.git
