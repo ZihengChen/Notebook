@@ -71,6 +71,7 @@ config.Site.storageSite = 'T2_CH_CERN'
 
 ```
 ./multicrab -c submit
+./multicrab -c status -w 2018_EGamma_prod
 ./multicrab -c resubmit -w MyDir -o '--maxmemory=5000'
 
 ```
