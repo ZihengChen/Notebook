@@ -1,4 +1,4 @@
-```
+```bash
 cmsrel CMSSW_10_2_13
 cd CMSSW_10_2_13/src
 cmsenv
@@ -15,7 +15,7 @@ cd BaconProd/Ntupler/config
 cp /uscms/home/zchen/nobackup/produceBacon/15/CMSSW_10_2_13/src/BaconProd/Ntupler/config/multicrab .
 ```
   
-```
+```bash
 source /cvmfs/cms.cern.ch/cmsset_default.sh
 source /cvmfs/cms.cern.ch/crab3/crab.sh
 voms-proxy-init --rfc --voms cms
