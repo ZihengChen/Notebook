@@ -31,3 +31,8 @@ vim ./multicrab # edit your config.Data.unitsPerJob and config.Data.outLFNDirBas
 #./multicrab -c status -w MyDir
 #./multicrab -c resubmit -w MyDir -o '--maxmemory=5000'
 ```
+
+
+```
+crab report -d 2018_EGamma_prod/crab_EGamma_Run2018C-17Sep2018-v1
+```
