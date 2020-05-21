@@ -24,7 +24,7 @@ source /cvmfs/cms.cern.ch/cmsset_default.sh
 source /cvmfs/cms.cern.ch/crab3/crab.sh
 voms-proxy-init --rfc --voms cms
 
-vim ./multicrab # edit your config.Data.unitsPerJob and config.Data.outLFNDirBase 
+vim ./multicrab # edit line 93 config.Data.outLFNDirBase 
 ./multicrab -c submit
 
 # other multicrab
