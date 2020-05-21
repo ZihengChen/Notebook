@@ -32,7 +32,7 @@ vim ./multicrab # edit your config.Data.unitsPerJob and config.Data.outLFNDirBas
 #./multicrab -c resubmit -w MyDir -o '--maxmemory=5000'
 ```
 
-
+## generate report for unfinished lumi section
 ```
 crab report -d 2018_EGamma_prod/crab_EGamma_Run2018C-17Sep2018-v1
 ```
