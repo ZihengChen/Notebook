@@ -31,8 +31,10 @@ In the file input/mg5_configuration.txt, change the delphes_path variable on lin
 
 ```
 cd models
-wget 
+wget https://github.com/ZihengChen/Notebook/raw/master/Recom/Recomv2_UFO.zip
 unzip Recomv2_UFO.zip
+cd ..
+wget 
 ./bin/mg5_aMC Recom_proc_card_mg5.dat
 cd Recom
 
