@@ -4,7 +4,9 @@ This setup instruction follows and updates an older tutorial found [here](https:
 
 
 
-## 1. Madgraph5
+## 1. Setup
+
+### 1.1 Madgraph
 ```
 wget http://launchpad.net/madgraph5/2.0/2.7.x/+download/MG5_aMC_v2.7.3.tar.gz
 tar -xf MG5_aMC_v2.7.3.tar.gz MG5_aMC_v2_7_3/
@@ -16,7 +18,7 @@ install pythia-pgs
 quit
 ```
 
-## 2. Delphes
+### 1.2 Delphes
 
 ```
 wget http://cp3.irmp.ucl.ac.be/downloads/Delphes-3.4.2.tar.gz
@@ -27,26 +29,32 @@ vim input/mg5_configuration.txt
 ```
 In the file input/mg5_configuration.txt, change the delphes_path variable on line 143 from `# delphes_path = ./Delphes` to `delphes_path = ./Delphes-3.2.0`
 
-## 3. Recomv2 Model
+### 1.3 Recomv2 Model
 
 Coloron model implies the existence of a heavy color-octet spin-1 particle [[1]](https://www.sciencedirect.com/science/article/pii/037026939191061Y).
 The phonominology and possible signal of Renormalized Roloron Model (ReCoM) at LHC is presented in [1802.03005](https://arxiv.org/abs/1802.03005)
 
 The code of Recomv2 model for Madgraph5 is kindly provided by [Yang Bai](https://pages.physics.wisc.edu/~yangbai/Home.html) and Dr. Sida Lu
 
-### 3.1 compose generator
 ```
 cd models
 wget https://github.com/ZihengChen/Notebook/raw/master/Recom/Recomv2_UFO.zip
 unzip Recomv2_UFO.zip
-cd ..
+```
+
+## 2. Generate MC Events
+
+### 2.1 compose generator
+
+```
+cd MG5_aMC_v2_7_3
 wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/Recom/Recom_proc_card_mg5.dat
 ./bin/mg5_aMC Recom_proc_card_mg5.dat
 ```
 
 
 
-### 3.2 run generator
+### 2.2 run generator
 ```
 cd Recom_event_generator
 ```
