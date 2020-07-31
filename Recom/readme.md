@@ -32,7 +32,7 @@ In the file input/mg5_configuration.txt, change the delphes_path variable on lin
 Coloron model implies the existence of a heavy color-octet spin-1 particle [[1]](https://www.sciencedirect.com/science/article/pii/037026939191061Y).
 The phonominology and possible signal of Renormalized Roloron Model (ReCoM) at LHC is presented in [1802.03005](https://arxiv.org/abs/1802.03005)
 
-The code of Recomv2 extra model is kindly provided by [Yang Bai](https://pages.physics.wisc.edu/~yangbai/Home.html)
+The code of Recomv2 model for Madgraph5 is kindly provided by [Yang Bai](https://pages.physics.wisc.edu/~yangbai/Home.html) and Dr. Sida Lu
 
 ### 3.1 compose generator
 ```
