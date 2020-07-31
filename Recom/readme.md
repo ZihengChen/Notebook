@@ -1,4 +1,4 @@
-# Setup Madgraph5 and Delphes
+# Generate ReCoM MC Events
 Make sure you have setup your gcc and root. On LPC, this can be done by enabling a cmssw environemnt `cmsenv`.
 This setup instruction follows and updates an older tutorial found [here](https://twiki.cern.ch/twiki/bin/view/CMSPublic/MadgraphTutorial#Madgraph_and_Delphes_Tutorial)
 
