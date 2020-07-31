@@ -41,6 +41,7 @@ The code of Recomv2 model for Madgraph5 is kindly provided by [Yang Bai](https:/
 cd models
 wget https://github.com/ZihengChen/Notebook/raw/master/Recom/Recomv2_UFO.zip
 unzip Recomv2_UFO.zip
+cd ..
 ```
 
 ## 2. Generate MC Events
@@ -48,7 +49,6 @@ unzip Recomv2_UFO.zip
 ### 2.1 compose generator
 
 ```
-cd MG5_aMC_v2_7_3
 wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/Recom/Recom_proc_card_mg5.dat
 ./bin/mg5_aMC Recom_proc_card_mg5.dat
 ```
