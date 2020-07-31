@@ -27,17 +27,36 @@ vim input/mg5_configuration.txt
 ```
 In the file input/mg5_configuration.txt, change the delphes_path variable on line 143 from `# delphes_path = ./Delphes` to `delphes_path = ./Delphes-3.2.0`
 
-## 3. Recomv2
+## 3. Recomv2 generator
 
+### 3.1 compose generator 
 ```
 cd models
 wget https://github.com/ZihengChen/Notebook/raw/master/Recom/Recomv2_UFO.zip
 unzip Recomv2_UFO.zip
 cd ..
-wget 
+wget https://raw.githubusercontent.com/ZihengChen/Notebook/master/Recom/Recom_proc_card_mg5.dat
 ./bin/mg5_aMC Recom_proc_card_mg5.dat
-cd Recom
+```
 
 
-open index.html
+
+### 3.2 run generator
+```
+cd Recom_event_generator
+```
+
+Details of the process and event generation are stored in an html file, which can be opened with: `open index.html`
+This file will be opened in Mozilla Firefox, the default browser, if it is installed. 
+You can view the subprocesses and Feynman diagrams for the process under Process Information.
+
+```
 ./bin/generate_events
+```
+
+This will produce `.lhe` events located in `Events/run_XX/'.
+
+If you want simulate CMS with delphes, in the generator prompt, you can turn it on and use CMS simulation card `Cards/delphes_card_CMS.dat`
+
+
+
