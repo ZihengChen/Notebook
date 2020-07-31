@@ -1,6 +1,6 @@
 # Setup Madgraph5 and Delphes
 Make sure you have setup your gcc and root. On LPC, this can be done by enabling a cmssw environemnt `cmsenv`.
-This setup instruction follows and updates the original tutorial [here](https://twiki.cern.ch/twiki/bin/view/CMSPublic/MadgraphTutorial#Madgraph_and_Delphes_Tutorial)
+This setup instruction follows and updates an older tutorial found [here](https://twiki.cern.ch/twiki/bin/view/CMSPublic/MadgraphTutorial#Madgraph_and_Delphes_Tutorial)
 
 
 
