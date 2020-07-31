@@ -25,9 +25,10 @@ wget http://cp3.irmp.ucl.ac.be/downloads/Delphes-3.4.2.tar.gz
 tar -xf Delphes-3.4.2.tar.gz
 cd Delphes-3.4.2
 make
+cd ..
 vim input/mg5_configuration.txt
 ```
-In the file input/mg5_configuration.txt, change the delphes_path variable on line 143 from `# delphes_path = ./Delphes` to `delphes_path = ./Delphes-3.2.0`
+In the file input/mg5_configuration.txt, change the delphes_path variable on line 143 from `# delphes_path = ./Delphes` to `delphes_path = ./Delphes-3.4.2`
 
 ### 1.3 Recomv2 Model
 
