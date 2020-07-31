@@ -13,7 +13,7 @@ tar -xf MG5_aMC_v2.7.3.tar.gz MG5_aMC_v2_7_3/
 cd MG5_aMC_v2_7_3/
 ./bin/mg5_aMC
 
-# in the mg5_aMC interative command line tool
+# in the mg5_aMC interative Command Line Interface (CLI)
 install pythia-pgs
 quit
 ```
