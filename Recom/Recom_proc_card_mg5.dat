@@ -35,5 +35,6 @@ define l+ = e+ mu+
 define l- = e- mu-
 define vl = ve vm
 define vl~ = ve~ vm~
-generate p p  > Gp >  Th Ph 
+# generate p p  > Gp >  Th Ph 
+p p  >  Gp > Th Ph, Th > t t~ Ph
 output Recom_event_generator
